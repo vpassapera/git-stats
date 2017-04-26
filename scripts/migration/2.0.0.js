@@ -7,8 +7,10 @@ var ReadJson = require("r-json")
   , Logger = require("bug-killer")
   ;
 
+var data_file_location = process.env.GIT_STAT_LOCATION || '~/.git-stats';
+
 // Constants
-const DATA_FILE = Abs("~/.git-stats");
+const DATA_FILE = Abs(data_file_location);
 
 function migrate() {
     var data = {};
